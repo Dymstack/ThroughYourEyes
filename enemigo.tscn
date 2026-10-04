@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bkme1ws8j7jlj"]
+
+[ext_resource type="Script" uid="uid://bg283gcyic35j" path="res://enemigo.gd" id="1_becj5"]
+[ext_resource type="Texture2D" uid="uid://c7yab3y8jllok" path="res://enemigo1.png" id="2_a5tj2"]
+[ext_resource type="AudioStream" uid="uid://dv1xg6kku6ppf" path="res://muerteenemigos.mp3" id="3_moxti"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5tj2"]
+radius = 40.0
+height = 82.0
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=760359585 groups=["enemigos"]]
+script = ExtResource("1_becj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2045289058 groups=["enemigos"]]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_a5tj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849408220 groups=["enemigos"]]
+shape = SubResource("CapsuleShape2D_a5tj2")
+
+[node name="SonidoMuerte" type="AudioStreamPlayer2D" parent="." unique_id=1686707521]
+stream = ExtResource("3_moxti")

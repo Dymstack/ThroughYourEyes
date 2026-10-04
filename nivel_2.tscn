@@ -1,0 +1,492 @@
+[gd_scene format=3 uid="uid://jfotjweww5l7"]
+
+[ext_resource type="Script" uid="uid://bjwtms0j71gvg" path="res://nivel_2.gd" id="1_0p6vv"]
+[ext_resource type="Texture2D" uid="uid://crvjvogi8oof8" path="res://nivel_2_bg.jpeg" id="2_1vpmn"]
+[ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="3_t0by4"]
+[ext_resource type="PackedScene" uid="uid://dr6wt78msc13u" path="res://bala.tscn" id="4_0p6vv"]
+[ext_resource type="Script" uid="uid://o0mrdmpmgbnr" path="res://kai.gd" id="4_t0by4"]
+[ext_resource type="Texture2D" uid="uid://drg6mtdwk5myi" path="res://Kai_arma.png" id="5_5uoxw"]
+[ext_resource type="Texture2D" uid="uid://cxy6gh20tlj1c" path="res://baston.png" id="5_t0by4"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="6_awced"]
+[ext_resource type="Texture2D" uid="uid://b3pgtuxay3b4c" path="res://gun.png" id="7_5uoxw"]
+[ext_resource type="AudioStream" uid="uid://cxygncxduu24h" path="res://laser.mp3" id="7_awced"]
+[ext_resource type="Texture2D" uid="uid://iqeo2kfbnwvu" path="res://flecha_salida.png" id="7_qpa43"]
+[ext_resource type="Texture2D" uid="uid://dd8nkrx8j5s8f" path="res://next_button.png" id="8_pc0te"]
+[ext_resource type="Texture2D" uid="uid://dspdokcqabthf" path="res://reintentar.png" id="9_jraa4"]
+[ext_resource type="Texture2D" uid="uid://cvbcm6vukygy1" path="res://inicio.png" id="10_incw3"]
+[ext_resource type="AudioStream" uid="uid://bewgdbtwpguin" path="res://game_over.mp3" id="11_hvc7f"]
+[ext_resource type="PackedScene" uid="uid://bkme1ws8j7jlj" path="res://enemigo.tscn" id="13_5uoxw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htw3k"]
+radius = 73.33485
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8a4r"]
+radius = 69.50045
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5uoxw"]
+radius = 34.0
+height = 204.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t0by4"]
+radius = 15.556366
+height = 106.06616
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_awced"]
+radius = 44.54773
+height = 114.55133
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_320mp"]
+size = Vector2(717, 383)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd3qp"]
+size = Vector2(61, 1178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6epq6"]
+size = Vector2(658, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfns5"]
+size = Vector2(83.625, 1089.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qpa43"]
+height = 100.726654
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfqim"]
+size = Vector2(479.51624, 554.1597)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pup2p"]
+light_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_kd3qp"]
+font_size = 24
+
+[sub_resource type="SystemFont" id="SystemFont_byh8v"]
+
+[sub_resource type="FontVariation" id="FontVariation_2n6wq"]
+base_font = SubResource("SystemFont_byh8v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsmfd"]
+bg_color = Color(1, 1, 1, 0.4745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35awb"]
+bg_color = Color(0, 0.7921569, 0, 1)
+
+[sub_resource type="Theme" id="Theme_34yp4"]
+ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+ProgressBar/colors/font_outline_color = Color(1, 0, 0, 1)
+ProgressBar/constants/outline_size = 0
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = SubResource("FontVariation_2n6wq")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_jsmfd")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_35awb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t0n7"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftxg7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e6mi"]
+bg_color = Color(0.31828272, 0.9853063, 1.92523e-06, 1)
+
+[sub_resource type="Theme" id="Theme_yyrpj"]
+Panel/styles/panel = SubResource("StyleBoxFlat_1t0n7")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ftxg7")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_4e6mi")
+
+[sub_resource type="SystemFont" id="SystemFont_6epq6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vfns5"]
+font = SubResource("SystemFont_6epq6")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.07058824, 0.08627451, 0.21176471, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_7ce3s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6epq6"]
+font = SubResource("SystemFont_7ce3s")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 1, 0)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6epq6"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyrpj"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7xd2"]
+size = Vector2(76, 92)
+
+[node name="Control" type="Control" unique_id=554197368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0p6vv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1465533635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1vpmn")
+expand_mode = 1
+
+[node name="CapLight" type="PointLight2D" parent="." unique_id=907887927]
+position = Vector2(360.50003, 298)
+scale = Vector2(3.359375, 3.2812495)
+energy = 1.2
+texture = ExtResource("3_t0by4")
+
+[node name="Laberinto" type="StaticBody2D" parent="." unique_id=2144693175]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laberinto" unique_id=121023290]
+position = Vector2(231, 992)
+shape = SubResource("CircleShape2D_htw3k")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Laberinto" unique_id=158946471]
+position = Vector2(522, 365)
+shape = SubResource("CircleShape2D_x8a4r")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Laberinto" unique_id=600328401]
+position = Vector2(361, 584)
+shape = SubResource("CapsuleShape2D_5uoxw")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Laberinto" unique_id=1734054338]
+position = Vector2(425.00003, 692)
+rotation = 2.3561945
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("CapsuleShape2D_t0by4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Laberinto" unique_id=1257942866]
+position = Vector2(543.00006, 956.00006)
+rotation = -2.3561945
+shape = SubResource("CapsuleShape2D_awced")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Laberinto" unique_id=1297284438]
+position = Vector2(359.5, 192.5)
+shape = SubResource("RectangleShape2D_320mp")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Laberinto" unique_id=74895868]
+position = Vector2(33.5, 692)
+shape = SubResource("RectangleShape2D_kd3qp")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Laberinto" unique_id=458865936]
+position = Vector2(390, 1235)
+shape = SubResource("RectangleShape2D_6epq6")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Laberinto" unique_id=833577841]
+position = Vector2(676.8125, 665)
+shape = SubResource("RectangleShape2D_vfns5")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Laberinto" unique_id=1782481240]
+position = Vector2(286, 665)
+rotation = 1.0471975
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_qpa43")
+
+[node name="Kai" type="CharacterBody2D" parent="." unique_id=991716293 groups=["jugador"]]
+position = Vector2(383.00003, 1156)
+rotation = 3.1415927
+scale = Vector2(0.11913065, -0.10646742)
+script = ExtResource("4_t0by4")
+escena_bala = ExtResource("4_0p6vv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Kai" unique_id=1811232550]
+position = Vector2(197.05103, -112.23879)
+scale = Vector2(-0.88891214, 0.9317607)
+texture = ExtResource("5_5uoxw")
+
+[node name="LuzSonar" type="PointLight2D" parent="Kai/Sprite2D" unique_id=120515187]
+position = Vector2(13.6603985, -1090.7781)
+scale = Vector2(51.260845, 50.092247)
+energy = 0.0
+texture = ExtResource("3_t0by4")
+
+[node name="PuntoDisparo" type="Marker2D" parent="Kai/Sprite2D" unique_id=476921554]
+position = Vector2(221.67651, -433.96408)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kai" unique_id=1451047327]
+position = Vector2(193.06549, 8.2112234e-07)
+scale = Vector2(1, 1.0000012)
+shape = SubResource("RectangleShape2D_gfqim")
+
+[node name="SonidoDisparo" type="AudioStreamPlayer2D" parent="Kai" unique_id=1409834219]
+stream = ExtResource("7_awced")
+
+[node name="Oscuridad" type="CanvasModulate" parent="." unique_id=440583568]
+color = Color(0, 0, 0, 1)
+
+[node name="CapaInterfaz" type="CanvasLayer" parent="." unique_id=170224429]
+
+[node name="Timer" type="Timer" parent="CapaInterfaz" unique_id=902216207]
+autostart = true
+
+[node name="BotonSonar" type="Button" parent="CapaInterfaz" unique_id=1237591860]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 522.0
+offset_top = -199.0
+offset_right = 1554.0
+offset_bottom = 833.0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("5_t0by4")
+flat = true
+
+[node name="BotonDisparar" type="Button" parent="CapaInterfaz" unique_id=1774022240]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 598.0
+offset_top = -305.0
+offset_right = 1124.6665
+offset_bottom = 203.0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("7_5uoxw")
+flat = true
+
+[node name="Virtual Joystick" parent="CapaInterfaz" unique_id=1260593017 instance=ExtResource("6_awced")]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -672.0
+offset_top = -199.0
+offset_right = -472.0
+offset_bottom = 1.0
+grow_horizontal = 0
+scale = Vector2(0.76000005, 0.76)
+
+[node name="Label" type="Label" parent="CapaInterfaz" unique_id=1837605866]
+offset_left = 48.0
+offset_top = 50.0
+offset_right = 286.0
+offset_bottom = 84.0
+text = "Oxígeno"
+label_settings = SubResource("LabelSettings_kd3qp")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CapaInterfaz" unique_id=673623006]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_top = 93.0
+offset_right = -74.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme = SubResource("Theme_34yp4")
+
+[node name="FlechaMeta" type="Sprite2D" parent="CapaInterfaz" unique_id=386060449]
+position = Vector2(361, 403)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_qpa43")
+
+[node name="PanelTutorial" type="Panel" parent="CapaInterfaz" unique_id=703983327]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yyrpj")
+
+[node name="Label" type="Label" parent="CapaInterfaz/PanelTutorial" unique_id=630985456]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dispara a todas las criaturas para poder llegar a Capuccino."
+label_settings = SubResource("LabelSettings_vfns5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="CapaInterfaz/PanelTutorial" unique_id=799373001]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = 68.5
+offset_right = 94.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TUTORIAL"
+label_settings = SubResource("LabelSettings_6epq6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonSiguiente" type="Button" parent="CapaInterfaz/PanelTutorial" unique_id=1774908479]
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("8_pc0te")
+flat = true
+
+[node name="PanelMuerte" type="Panel" parent="CapaInterfaz" unique_id=447159316]
+auto_translate_mode = 1
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yyrpj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yyrpj")
+
+[node name="Label" type="Label" parent="CapaInterfaz/PanelMuerte" unique_id=1859629432]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Te has electrucutado!
+Vuelve a intentarlo."
+label_settings = SubResource("LabelSettings_vfns5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonReiniciar2" type="Button" parent="CapaInterfaz/PanelMuerte" unique_id=1016059479]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -371.625
+offset_top = -23.75
+offset_right = 136.375
+offset_bottom = 484.25
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 3.1415927
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("9_jraa4")
+flat = true
+
+[node name="BotonInicio" type="Button" parent="CapaInterfaz/PanelMuerte" unique_id=853102733]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("10_incw3")
+flat = true
+
+[node name="SonidoMuerte" type="AudioStreamPlayer2D" parent="CapaInterfaz" unique_id=2029116992]
+process_mode = 3
+stream = ExtResource("11_hvc7f")
+
+[node name="MetaEscape" type="Area2D" parent="." unique_id=1981843062]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="MetaEscape" unique_id=1110458130]
+position = Vector2(359, 433)
+shape = SubResource("RectangleShape2D_o7xd2")
+
+[node name="Enemigo" parent="." unique_id=760359585 instance=ExtResource("13_5uoxw")]
+position = Vector2(148.99997, 584)
+rotation = 3.1415927
+velocidad = 20.0
+
+[node name="Enemigo2" parent="." unique_id=1356679238 instance=ExtResource("13_5uoxw")]
+position = Vector2(533, 725)
+rotation = 0.2617994
+distancia_maxima = 170.0
+
+[node name="Enemigo3" parent="." unique_id=1825056491 instance=ExtResource("13_5uoxw")]
+position = Vector2(374, 848)
+rotation = -1.0471976
+velocidad = 30.0
+
+[connection signal="timeout" from="CapaInterfaz/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CapaInterfaz/BotonSonar" to="." method="_on_boton_sonar_pressed"]
+[connection signal="pressed" from="CapaInterfaz/BotonDisparar" to="." method="_on_boton_disparar_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelTutorial/BotonSiguiente" to="." method="_on_boton_siguiente_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelMuerte/BotonReiniciar2" to="." method="_on_boton_reiniciar_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelMuerte/BotonInicio" to="." method="_on_boton_inicio_pressed"]
+[connection signal="body_entered" from="MetaEscape" to="." method="_on_meta_escape_body_entered"]

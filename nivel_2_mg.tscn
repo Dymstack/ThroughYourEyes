@@ -1,0 +1,471 @@
+[gd_scene format=3 uid="uid://byoxwr7pnywex"]
+
+[ext_resource type="Script" uid="uid://p7dh2kenc52r" path="res://nivel_2_mg.gd" id="1_i65qh"]
+[ext_resource type="AudioStream" uid="uid://c8mtgngocmsy5" path="res://dtmf-dial-tones-0.mp3" id="2_3f8jo"]
+[ext_resource type="Texture2D" uid="uid://bhv2otmrb6hj2" path="res://nivel2_mg_bg.png" id="2_i65qh"]
+[ext_resource type="AudioStream" uid="uid://ddl7h8h3n8bxb" path="res://dtmf-dial-tones-1.mp3" id="3_my6a4"]
+[ext_resource type="AudioStream" uid="uid://jkmpntenio8h" path="res://dtmf-dial-tones-2.mp3" id="4_dyxct"]
+[ext_resource type="Texture2D" uid="uid://dd8nkrx8j5s8f" path="res://next_button.png" id="5_gfdol"]
+[ext_resource type="AudioStream" uid="uid://dy1vq1feg1t2g" path="res://dtmf-dial-tones-3.mp3" id="5_v378c"]
+[ext_resource type="Texture2D" uid="uid://dspdokcqabthf" path="res://reintentar.png" id="6_chm4o"]
+[ext_resource type="AudioStream" uid="uid://cg37mceueewwc" path="res://dtmf-dial-tones-4.mp3" id="6_fns2k"]
+[ext_resource type="AudioStream" uid="uid://d1hlmvxwvrtoy" path="res://dtmf-dial-tones-5.mp3" id="7_i8o5t"]
+[ext_resource type="Texture2D" uid="uid://cvbcm6vukygy1" path="res://inicio.png" id="7_uk1ng"]
+[ext_resource type="AudioStream" uid="uid://dwsrlg4e23uyc" path="res://dtmf-dial-tones-6.mp3" id="8_ktywy"]
+[ext_resource type="AudioStream" uid="uid://db37qykluj3xh" path="res://win.mp3" id="8_usb4h"]
+[ext_resource type="AudioStream" uid="uid://cjoaf3pmqgkgj" path="res://dtmf-dial-tones-7.mp3" id="9_0v6m2"]
+[ext_resource type="AudioStream" uid="uid://bl1wf0kd0u0ni" path="res://addons/wrong_SriFgVc.mp3" id="10_3f8jo"]
+[ext_resource type="AudioStream" uid="uid://cx5qvf8vdnfat" path="res://dtmf-dial-tones-8.mp3" id="10_jxfag"]
+[ext_resource type="AudioStream" uid="uid://bc84gkoxci3xi" path="res://dtmf-dial-tones-9.mp3" id="11_7hbuw"]
+[ext_resource type="AudioStream" uid="uid://bewgdbtwpguin" path="res://game_over.mp3" id="11_my6a4"]
+[ext_resource type="AudioStream" uid="uid://dk11h8arkp448" path="res://door-unlock.mp3" id="12_dyxct"]
+[ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="13_my6a4"]
+[ext_resource type="Texture2D" uid="uid://o5t7ologj0g" path="res://boton_escuchar.png" id="15_dyxct"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pup2p"]
+light_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_kd3qp"]
+font_size = 24
+
+[sub_resource type="SystemFont" id="SystemFont_byh8v"]
+
+[sub_resource type="FontVariation" id="FontVariation_2n6wq"]
+base_font = SubResource("SystemFont_byh8v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsmfd"]
+bg_color = Color(1, 1, 1, 0.4745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35awb"]
+bg_color = Color(0, 0.7921569, 0, 1)
+
+[sub_resource type="Theme" id="Theme_34yp4"]
+ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+ProgressBar/colors/font_outline_color = Color(1, 0, 0, 1)
+ProgressBar/constants/outline_size = 0
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = SubResource("FontVariation_2n6wq")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_jsmfd")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_35awb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t0n7"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftxg7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e6mi"]
+bg_color = Color(0.31828272, 0.9853063, 1.92523e-06, 1)
+
+[sub_resource type="Theme" id="Theme_yyrpj"]
+Panel/styles/panel = SubResource("StyleBoxFlat_1t0n7")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ftxg7")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_4e6mi")
+
+[sub_resource type="SystemFont" id="SystemFont_idoxl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vp6hu"]
+font = SubResource("SystemFont_idoxl")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.07058824, 0.08627451, 0.21176471, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_7ce3s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6epq6"]
+font = SubResource("SystemFont_7ce3s")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 1, 0)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6epq6"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyrpj"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="SystemFont" id="SystemFont_6epq6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vfns5"]
+font = SubResource("SystemFont_6epq6")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.07058824, 0.08627451, 0.21176471, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[node name="Control" type="Control" unique_id=554197368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i65qh")
+sonidos_teclas = Array[AudioStream]([ExtResource("2_3f8jo"), ExtResource("3_my6a4"), ExtResource("4_dyxct"), ExtResource("5_v378c"), ExtResource("6_fns2k"), ExtResource("7_i8o5t"), ExtResource("8_ktywy"), ExtResource("9_0v6m2"), ExtResource("10_jxfag"), ExtResource("11_7hbuw")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1858393172]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i65qh")
+expand_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=961756163]
+position = Vector2(360.49997, 728.99994)
+scale = Vector2(11.234375, 17.21875)
+texture = ExtResource("13_my6a4")
+
+[node name="Oscuridad" type="CanvasModulate" parent="." unique_id=440583568]
+color = Color(0, 0, 0, 1)
+
+[node name="CapaInterfaz" type="CanvasLayer" parent="." unique_id=170224429]
+
+[node name="Timer" type="Timer" parent="CapaInterfaz" unique_id=902216207]
+autostart = true
+
+[node name="BotonEscuchar" type="Button" parent="CapaInterfaz" unique_id=1237591860]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 522.0
+offset_top = -199.0
+offset_right = 1554.0
+offset_bottom = 833.0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("15_dyxct")
+flat = true
+
+[node name="Label" type="Label" parent="CapaInterfaz" unique_id=1837605866]
+offset_left = 48.0
+offset_top = 50.0
+offset_right = 286.0
+offset_bottom = 84.0
+text = "Oxígeno"
+label_settings = SubResource("LabelSettings_kd3qp")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CapaInterfaz" unique_id=673623006]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_top = 93.0
+offset_right = -74.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme = SubResource("Theme_34yp4")
+
+[node name="PanelTutorial" type="Panel" parent="CapaInterfaz" unique_id=703983327]
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yyrpj")
+
+[node name="Label" type="Label" parent="CapaInterfaz/PanelTutorial" unique_id=630985456]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Llegaste a Cap!
+Replica el sonido para poder abrir la jaula."
+label_settings = SubResource("LabelSettings_vp6hu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="CapaInterfaz/PanelTutorial" unique_id=799373001]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = 68.5
+offset_right = 94.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TUTORIAL"
+label_settings = SubResource("LabelSettings_6epq6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonSiguiente" type="Button" parent="CapaInterfaz/PanelTutorial" unique_id=1774908479]
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("5_gfdol")
+flat = true
+
+[node name="PanelMuerte" type="Panel" parent="CapaInterfaz" unique_id=447159316]
+auto_translate_mode = 1
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yyrpj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yyrpj")
+
+[node name="Label" type="Label" parent="CapaInterfaz/PanelMuerte" unique_id=1859629432]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Te has electrucutado!
+Vuelve a intentarlo."
+label_settings = SubResource("LabelSettings_vfns5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonReiniciar2" type="Button" parent="CapaInterfaz/PanelMuerte" unique_id=1016059479]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -371.625
+offset_top = -23.75
+offset_right = 136.375
+offset_bottom = 484.25
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 3.1415927
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("6_chm4o")
+flat = true
+
+[node name="BotonInicio" type="Button" parent="CapaInterfaz/PanelMuerte" unique_id=853102733]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("7_uk1ng")
+flat = true
+
+[node name="PanelExito" type="Panel" parent="CapaInterfaz" unique_id=540111591]
+auto_translate_mode = 1
+material = SubResource("CanvasItemMaterial_pup2p")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_yyrpj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yyrpj")
+
+[node name="Label" type="Label" parent="CapaInterfaz/PanelExito" unique_id=880519345]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Has abierto la jaula!
+Ahora regresa a la cápsula de escape con Capuccino."
+label_settings = SubResource("LabelSettings_vfns5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonSigNivel" type="Button" parent="CapaInterfaz/PanelExito" unique_id=1935622150]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -448.625
+offset_top = -97.5
+offset_right = 59.375
+offset_bottom = 410.5
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("5_gfdol")
+flat = true
+
+[node name="BotonInicio" type="Button" parent="CapaInterfaz/PanelExito" unique_id=1360199497]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_6epq6")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("7_uk1ng")
+flat = true
+
+[node name="ReproductorAudio" type="AudioStreamPlayer2D" parent="." unique_id=1094132816]
+
+[node name="Boton_0" type="Button" parent="." unique_id=2130551666]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 888.99994
+offset_right = 160.17795
+offset_bottom = 901.54944
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_1" type="Button" parent="." unique_id=704930915]
+layout_mode = 0
+offset_left = 243.99998
+offset_top = 888.99994
+offset_right = 256.43546
+offset_bottom = 901.41565
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_2" type="Button" parent="." unique_id=1992365388]
+layout_mode = 0
+offset_left = 344.99997
+offset_top = 888.99994
+offset_right = 356.87653
+offset_bottom = 901.4157
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_3" type="Button" parent="." unique_id=1611029781]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 888.99994
+offset_right = 455.85464
+offset_bottom = 901.57794
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="SonidoGanador" type="AudioStreamPlayer2D" parent="." unique_id=164449939]
+position = Vector2(363.00003, 714.99994)
+rotation = -3.1415925
+scale = Vector2(9.706739, -16.213196)
+stream = ExtResource("8_usb4h")
+
+[node name="SonidoError" type="AudioStreamPlayer2D" parent="." unique_id=993211823]
+stream = ExtResource("10_3f8jo")
+
+[node name="SonidoMuerte" type="AudioStreamPlayer2D" parent="." unique_id=2029116992]
+process_mode = 3
+stream = ExtResource("11_my6a4")
+
+[node name="SonidoJaula" type="AudioStreamPlayer2D" parent="." unique_id=784363024]
+stream = ExtResource("12_dyxct")
+
+[connection signal="timeout" from="CapaInterfaz/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CapaInterfaz/PanelTutorial/BotonSiguiente" to="." method="_on_boton_siguiente_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelMuerte/BotonReiniciar2" to="." method="_on_boton_reiniciar_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelMuerte/BotonInicio" to="." method="_on_boton_inicio_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelExito/BotonSigNivel" to="." method="_on_boton_sig_nivel_pressed"]
+[connection signal="pressed" from="CapaInterfaz/PanelExito/BotonInicio" to="." method="_on_boton_inicio_pressed"]
+[connection signal="pressed" from="Boton_0" to="." method="_on_boton_0_pressed"]
+[connection signal="pressed" from="Boton_1" to="." method="_on_boton_1_pressed"]
+[connection signal="pressed" from="Boton_2" to="." method="_on_boton_2_pressed"]
+[connection signal="pressed" from="Boton_3" to="." method="_on_boton_3_pressed"]
