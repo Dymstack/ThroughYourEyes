@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://de8spun77avf8"]
+
+[ext_resource type="VideoStream" uid="uid://xjvwxiifueh4" path="res://addons/videos/historia.ogv" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://bkaov1jnx2kjm" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cjxs8r1unrhp7" path="res://addons/images/inicio_bg.png" id="2_lquwl"]
+[ext_resource type="AudioStream" uid="uid://cvcfw3luqhpup" path="res://addons/sounds/music.mp3" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://mvma3q8wrukq" path="res://addons/images/jugar.png" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://s12bjplgbsol" path="res://addons/images/omitir.png" id="4_272bh"]
+
+[node name="Main" type="Node" unique_id=1408018333]
+script = ExtResource("1_lquwl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=705413620]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ColorRect" unique_id=1659144120]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -900.0
+offset_right = 540.0
+offset_bottom = 900.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_1bvp3")
+autoplay = true
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1912878216]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lquwl")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="." unique_id=1290624399]
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -220.0
+offset_right = 150.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("4_7mycd")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=918608738]
+stream = ExtResource("3_7mycd")
+
+[node name="ButtonSkip" type="Button" parent="." unique_id=640446114]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_top = -173.0
+offset_right = -60.0
+offset_bottom = -73.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("4_272bh")
+flat = true
+expand_icon = true

@@ -1,2 +1,3 @@
 extends Node
-var oxigeno_actual = 100
+
+var current_oxygen: int = 100

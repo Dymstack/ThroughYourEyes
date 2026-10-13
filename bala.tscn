@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dr6wt78msc13u"]
 
 [ext_resource type="Script" uid="uid://fh6t7ff8cq1p" path="res://bala.gd" id="1_jk513"]
-[ext_resource type="Texture2D" uid="uid://bnde2n08xtgti" path="res://bala.png" id="2_ag3k0"]
+[ext_resource type="Texture2D" uid="uid://bnde2n08xtgti" path="res://addons/images/bala.png" id="2_ag3k0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bm4c"]
 radius = 7.0

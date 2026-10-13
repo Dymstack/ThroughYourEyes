@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://djxoi3aetw5h7"]
+
+[ext_resource type="Script" uid="uid://cfcftpxr64cre" path="res://tutorial.gd" id="1_5mrt3"]
+[ext_resource type="Texture2D" uid="uid://dd8nkrx8j5s8f" path="res://addons/images/next_button.png" id="1_ehuit"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hu44a"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t0n7"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftxg7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e6mi"]
+bg_color = Color(0.31828272, 0.9853063, 1.92523e-06, 1)
+
+[sub_resource type="Theme" id="Theme_0cr88"]
+Panel/styles/panel = SubResource("StyleBoxFlat_1t0n7")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ftxg7")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_4e6mi")
+
+[sub_resource type="SystemFont" id="SystemFont_6epq6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4t6hg"]
+font = SubResource("SystemFont_6epq6")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.07058824, 0.08627451, 0.21176471, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_7ce3s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vrqn"]
+font = SubResource("SystemFont_7ce3s")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 1, 0)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bhfnd"]
+light_mode = 1
+
+[node name="Tutorial" type="CanvasLayer" unique_id=1185860797]
+script = ExtResource("1_5mrt3")
+
+[node name="Panel" type="Panel" parent="." unique_id=2138105444]
+material = SubResource("CanvasItemMaterial_hu44a")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.625
+offset_top = -153.5
+offset_right = 237.625
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_0cr88")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1288845453]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -128.5
+offset_right = 212.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Toca el botón con el ícono del bastón para revelar tu entorno por un segundo."
+label_settings = SubResource("LabelSettings_4t6hg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Panel" unique_id=1057206101]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = 68.5
+offset_right = 94.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TUTORIAL"
+label_settings = SubResource("LabelSettings_7vrqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonNext" type="Button" parent="Panel" unique_id=2076783717]
+material = SubResource("CanvasItemMaterial_bhfnd")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.62497
+offset_top = -99.75003
+offset_right = 408.37506
+offset_bottom = 408.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("1_ehuit")
+flat = true
+
+[node name="ButtonBack" type="Button" parent="Panel" unique_id=1596626104]
+material = SubResource("CanvasItemMaterial_bhfnd")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -371.625
+offset_top = -23.75003
+offset_right = 136.375
+offset_bottom = 484.25
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 3.1415927
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("1_ehuit")
+flat = true

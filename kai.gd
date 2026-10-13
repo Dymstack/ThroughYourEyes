@@ -1,43 +1,54 @@
 extends CharacterBody2D
 
-@export var escena_bala: PackedScene
-@export var velocidad = 300
+@export var laser_scene: PackedScene
+@export var speed = 300
 var direccion_joystick = Vector2.ZERO
-@onready var sprite = $Sprite2D
-@onready var punto_disparo = get_node_or_null("Sprite2D/PuntoDisparo")
-@onready var sonido_disparo = get_node_or_null("SonidoDisparo")
 
-func _physics_process(delta):
-	# Actualizamos la ruta para buscarlo dentro de la nueva capa
-	var joystick = get_parent().get_node_or_null("CapaInterfaz/Virtual Joystick")
+@onready var sprite = $AnimatedSprite2D
+@onready var trigger = get_node_or_null("AnimatedSprite2D/Marker2D")
+@onready var light = get_node_or_null("AnimatedSprite2D/PointLight2D")
+
+func _ready() -> void:
+	if light: light.energy = 0.0
+
+func _physics_process(delta) -> void:
+	var joystick = get_tree().current_scene.get_node_or_null("HUD/Virtual Joystick")
 	
 	if joystick:
-		var direccion = joystick.output
-		velocity = direccion * velocidad
+		var direction = joystick.output
+		velocity = direction * speed
 		
-		# Si se está moviendo, invertimos el eje X para corregir la inversión
 		if velocity.length() > 0:
-			sprite.rotation = atan2(-velocity.x, -velocity.y)
+			sprite.rotation = velocity.angle() + deg_to_rad(90)
 			
 		move_and_slide()
 		
-func _on_boton_disparar_pressed() -> void:
-	if escena_bala:
-		var nueva_bala = escena_bala.instantiate()
+func shoot() -> void:
+	if laser_scene:
+		var new_bullet = laser_scene.instantiate()
 		
-		# La bala ahora toma las coordenadas exactas del marcador exterior
-		if punto_disparo:
-			nueva_bala.global_position = punto_disparo.global_position
+		if trigger:
+			new_bullet.global_position = trigger.global_position
 		else:
-			nueva_bala.global_position = global_position
+			new_bullet.global_position = global_position
 			
-		var sprite = get_node_or_null("Sprite2D")
 		if sprite:
-			nueva_bala.rotation = sprite.global_rotation
+			new_bullet.rotation = sprite.global_rotation
 		else:
-			nueva_bala.rotation = rotation
+			new_bullet.rotation = rotation
 			
-		get_parent().add_child(nueva_bala)
+		get_tree().current_scene.add_child(new_bullet)
+
+func activate_light() -> void:
+	if light:
+		light.energy = 1.5 
+		await get_tree().create_timer(0.5).timeout
+		light.energy = 0.0
 		
-		if sonido_disparo:
-			sonido_disparo.play()
+func update_appearance(is_armed: bool) -> void:
+	if not sprite: return
+	
+	if is_armed:
+		sprite.play("armed")
+	else:
+		sprite.play("default")

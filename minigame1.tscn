@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://doc204m3xxmsn"]
+
+[ext_resource type="Script" uid="uid://dhreq856uvvj8" path="res://level1.gd" id="1_m53ih"]
+[ext_resource type="Texture2D" uid="uid://b7ky7w6674ser" path="res://addons/images/nivel1_mg_bg.png" id="1_mqelh"]
+[ext_resource type="PackedScene" uid="uid://csdy3bj7iomvj" path="res://hud.tscn" id="4_1nxgi"]
+[ext_resource type="AudioStream" uid="uid://cnjf10d7ofwen" path="res://addons/sounds/keypad.mp3" id="8_7rmtp"]
+[ext_resource type="AudioStream" uid="uid://bl1wf0kd0u0ni" path="res://addons/sounds/wrong_SriFgVc.mp3" id="9_b0gmg"]
+[ext_resource type="AudioStream" uid="uid://bewgdbtwpguin" path="res://addons/sounds/gameover.mp3" id="10_f6awm"]
+[ext_resource type="Script" uid="uid://c3wbs2jxbdavv" path="res://keyboard.gd" id="11_5asgu"]
+[ext_resource type="AudioStream" uid="uid://dk11h8arkp448" path="res://addons/sounds/door-unlock.mp3" id="11_xb4fs"]
+[ext_resource type="PackedScene" uid="uid://cig8i804y3881" path="res://kai.tscn" id="12_m53ih"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y75rv"]
+line_spacing = -50.0
+paragraph_spacing = -100.0
+font_size = 90
+font_color = Color(0, 1, 0, 1)
+outline_size = 9
+outline_color = Color(0, 1, 0, 1)
+
+[node name="Minigame 1" type="Node" unique_id=1849061186]
+script = ExtResource("1_m53ih")
+is_minigame = true
+enable_joystick = false
+hide_kai_sprite = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2054863002]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mqelh")
+expand_mode = 1
+
+[node name="Kai" parent="." unique_id=113328961 instance=ExtResource("12_m53ih")]
+
+[node name="Oscuridad" type="CanvasModulate" parent="." unique_id=1050044986]
+color = Color(0, 0, 0, 1)
+
+[node name="HUD" parent="." unique_id=640789018 instance=ExtResource("4_1nxgi")]
+
+[node name="Keyboard" type="Node" parent="." unique_id=1766899612]
+script = ExtResource("11_5asgu")
+
+[node name="Digito_1" type="Label" parent="Keyboard" unique_id=234322228]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -369.0
+offset_right = -17.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+text = ". 
+.."
+label_settings = SubResource("LabelSettings_y75rv")
+vertical_alignment = 1
+
+[node name="Digito_2" type="Label" parent="Keyboard" unique_id=1011474961]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -369.0
+offset_right = 46.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "..
+.."
+label_settings = SubResource("LabelSettings_y75rv")
+vertical_alignment = 1
+
+[node name="Digito_3" type="Label" parent="Keyboard" unique_id=2000243993]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -369.0
+offset_right = 109.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+.."
+label_settings = SubResource("LabelSettings_y75rv")
+vertical_alignment = 1
+
+[node name="Digito_4" type="Label" parent="Keyboard" unique_id=1210543311]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = -369.0
+offset_right = 174.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "..
+ ."
+label_settings = SubResource("LabelSettings_y75rv")
+vertical_alignment = 1
+
+[node name="Boton_0" type="Button" parent="Keyboard" unique_id=1837367791]
+offset_left = 334.0
+offset_top = 709.0
+offset_right = 342.0
+offset_bottom = 717.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_1" type="Button" parent="Keyboard" unique_id=1870091000]
+offset_left = 264.0
+offset_top = 492.99997
+offset_right = 272.0
+offset_bottom = 500.99997
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_2" type="Button" parent="Keyboard" unique_id=716279917]
+offset_left = 334.0
+offset_top = 493.0
+offset_right = 342.0
+offset_bottom = 501.00003
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_3" type="Button" parent="Keyboard" unique_id=830574938]
+offset_left = 407.0
+offset_top = 492.99997
+offset_right = 415.0
+offset_bottom = 500.99997
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_4" type="Button" parent="Keyboard" unique_id=1270171250]
+offset_left = 264.0
+offset_top = 564.0
+offset_right = 272.0
+offset_bottom = 572.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_5" type="Button" parent="Keyboard" unique_id=807331326]
+offset_left = 334.0
+offset_top = 564.0
+offset_right = 342.0
+offset_bottom = 572.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_6" type="Button" parent="Keyboard" unique_id=1511401367]
+offset_left = 407.0
+offset_top = 564.0
+offset_right = 415.0
+offset_bottom = 572.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_7" type="Button" parent="Keyboard" unique_id=1065611495]
+offset_left = 264.0
+offset_top = 636.0
+offset_right = 272.0
+offset_bottom = 644.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_8" type="Button" parent="Keyboard" unique_id=293430658]
+offset_left = 334.0
+offset_top = 636.0
+offset_right = 342.0
+offset_bottom = 644.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Boton_9" type="Button" parent="Keyboard" unique_id=623747364]
+offset_left = 407.0
+offset_top = 636.0
+offset_right = 415.0
+offset_bottom = 644.0
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Key" type="AudioStreamPlayer2D" parent="." unique_id=1386387071]
+stream = ExtResource("8_7rmtp")
+
+[node name="SonidoError" type="AudioStreamPlayer2D" parent="." unique_id=1910833009]
+stream = ExtResource("9_b0gmg")
+
+[node name="SonidoMuerte" type="AudioStreamPlayer2D" parent="." unique_id=1412105834]
+process_mode = 3
+stream = ExtResource("10_f6awm")
+
+[node name="SonidoPuerta" type="AudioStreamPlayer2D" parent="." unique_id=1657288803]
+stream = ExtResource("11_xb4fs")

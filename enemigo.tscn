@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bkme1ws8j7jlj"]
 
 [ext_resource type="Script" uid="uid://bg283gcyic35j" path="res://enemigo.gd" id="1_becj5"]
-[ext_resource type="Texture2D" uid="uid://c7yab3y8jllok" path="res://enemigo1.png" id="2_a5tj2"]
-[ext_resource type="AudioStream" uid="uid://dv1xg6kku6ppf" path="res://muerteenemigos.mp3" id="3_moxti"]
+[ext_resource type="Texture2D" uid="uid://c7yab3y8jllok" path="res://addons/images/enemigo1.png" id="2_a5tj2"]
+[ext_resource type="AudioStream" uid="uid://dv1xg6kku6ppf" path="res://addons/sounds/muerteenemigos.mp3" id="3_moxti"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5tj2"]
 radius = 40.0

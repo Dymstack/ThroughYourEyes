@@ -1,26 +1,26 @@
 [gd_scene format=3 uid="uid://byoxwr7pnywex"]
 
 [ext_resource type="Script" uid="uid://p7dh2kenc52r" path="res://nivel_2_mg.gd" id="1_i65qh"]
-[ext_resource type="AudioStream" uid="uid://c8mtgngocmsy5" path="res://dtmf-dial-tones-0.mp3" id="2_3f8jo"]
-[ext_resource type="Texture2D" uid="uid://bhv2otmrb6hj2" path="res://nivel2_mg_bg.png" id="2_i65qh"]
-[ext_resource type="AudioStream" uid="uid://ddl7h8h3n8bxb" path="res://dtmf-dial-tones-1.mp3" id="3_my6a4"]
-[ext_resource type="AudioStream" uid="uid://jkmpntenio8h" path="res://dtmf-dial-tones-2.mp3" id="4_dyxct"]
-[ext_resource type="Texture2D" uid="uid://dd8nkrx8j5s8f" path="res://next_button.png" id="5_gfdol"]
-[ext_resource type="AudioStream" uid="uid://dy1vq1feg1t2g" path="res://dtmf-dial-tones-3.mp3" id="5_v378c"]
-[ext_resource type="Texture2D" uid="uid://dspdokcqabthf" path="res://reintentar.png" id="6_chm4o"]
-[ext_resource type="AudioStream" uid="uid://cg37mceueewwc" path="res://dtmf-dial-tones-4.mp3" id="6_fns2k"]
-[ext_resource type="AudioStream" uid="uid://d1hlmvxwvrtoy" path="res://dtmf-dial-tones-5.mp3" id="7_i8o5t"]
-[ext_resource type="Texture2D" uid="uid://cvbcm6vukygy1" path="res://inicio.png" id="7_uk1ng"]
-[ext_resource type="AudioStream" uid="uid://dwsrlg4e23uyc" path="res://dtmf-dial-tones-6.mp3" id="8_ktywy"]
-[ext_resource type="AudioStream" uid="uid://db37qykluj3xh" path="res://win.mp3" id="8_usb4h"]
-[ext_resource type="AudioStream" uid="uid://cjoaf3pmqgkgj" path="res://dtmf-dial-tones-7.mp3" id="9_0v6m2"]
-[ext_resource type="AudioStream" uid="uid://bl1wf0kd0u0ni" path="res://addons/wrong_SriFgVc.mp3" id="10_3f8jo"]
-[ext_resource type="AudioStream" uid="uid://cx5qvf8vdnfat" path="res://dtmf-dial-tones-8.mp3" id="10_jxfag"]
-[ext_resource type="AudioStream" uid="uid://bc84gkoxci3xi" path="res://dtmf-dial-tones-9.mp3" id="11_7hbuw"]
-[ext_resource type="AudioStream" uid="uid://bewgdbtwpguin" path="res://game_over.mp3" id="11_my6a4"]
-[ext_resource type="AudioStream" uid="uid://dk11h8arkp448" path="res://door-unlock.mp3" id="12_dyxct"]
+[ext_resource type="AudioStream" uid="uid://c8mtgngocmsy5" path="res://addons/sounds/dtmf-dial-tones-0.mp3" id="2_3f8jo"]
+[ext_resource type="Texture2D" uid="uid://bhv2otmrb6hj2" path="res://addons/images/nivel2_mg_bg.png" id="2_i65qh"]
+[ext_resource type="AudioStream" uid="uid://ddl7h8h3n8bxb" path="res://addons/sounds/dtmf-dial-tones-1.mp3" id="3_my6a4"]
+[ext_resource type="AudioStream" uid="uid://jkmpntenio8h" path="res://addons/sounds/dtmf-dial-tones-2.mp3" id="4_dyxct"]
+[ext_resource type="Texture2D" uid="uid://dd8nkrx8j5s8f" path="res://addons/images/next_button.png" id="5_gfdol"]
+[ext_resource type="AudioStream" uid="uid://dy1vq1feg1t2g" path="res://addons/sounds/dtmf-dial-tones-3.mp3" id="5_v378c"]
+[ext_resource type="Texture2D" uid="uid://dspdokcqabthf" path="res://addons/images/reintentar.png" id="6_chm4o"]
+[ext_resource type="AudioStream" uid="uid://cg37mceueewwc" path="res://addons/sounds/dtmf-dial-tones-4.mp3" id="6_fns2k"]
+[ext_resource type="AudioStream" uid="uid://d1hlmvxwvrtoy" path="res://addons/sounds/dtmf-dial-tones-5.mp3" id="7_i8o5t"]
+[ext_resource type="Texture2D" uid="uid://cvbcm6vukygy1" path="res://addons/images/inicio.png" id="7_uk1ng"]
+[ext_resource type="AudioStream" uid="uid://dwsrlg4e23uyc" path="res://addons/sounds/dtmf-dial-tones-6.mp3" id="8_ktywy"]
+[ext_resource type="AudioStream" uid="uid://db37qykluj3xh" path="res://addons/sounds/victory.mp3" id="8_usb4h"]
+[ext_resource type="AudioStream" uid="uid://cjoaf3pmqgkgj" path="res://addons/sounds/dtmf-dial-tones-7.mp3" id="9_0v6m2"]
+[ext_resource type="AudioStream" uid="uid://bl1wf0kd0u0ni" path="res://addons/sounds/wrong_SriFgVc.mp3" id="10_3f8jo"]
+[ext_resource type="AudioStream" uid="uid://cx5qvf8vdnfat" path="res://addons/sounds/dtmf-dial-tones-8.mp3" id="10_jxfag"]
+[ext_resource type="AudioStream" uid="uid://bc84gkoxci3xi" path="res://addons/sounds/dtmf-dial-tones-9.mp3" id="11_7hbuw"]
+[ext_resource type="AudioStream" uid="uid://bewgdbtwpguin" path="res://addons/sounds/gameover.mp3" id="11_my6a4"]
+[ext_resource type="AudioStream" uid="uid://dk11h8arkp448" path="res://addons/sounds/door-unlock.mp3" id="12_dyxct"]
 [ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="13_my6a4"]
-[ext_resource type="Texture2D" uid="uid://o5t7ologj0g" path="res://boton_escuchar.png" id="15_dyxct"]
+[ext_resource type="Texture2D" uid="uid://o5t7ologj0g" path="res://addons/images/boton_escuchar.png" id="15_dyxct"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pup2p"]
 light_mode = 1
@@ -48,22 +48,22 @@ ProgressBar/fonts/font = SubResource("FontVariation_2n6wq")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_jsmfd")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_35awb")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t0n7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f8jo"]
 bg_color = Color(18.892157, 18.892157, 18.892157, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftxg7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my6a4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e6mi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyxct"]
 bg_color = Color(0.31828272, 0.9853063, 1.92523e-06, 1)
 
 [sub_resource type="Theme" id="Theme_yyrpj"]
-Panel/styles/panel = SubResource("StyleBoxFlat_1t0n7")
-ProgressBar/styles/background = SubResource("StyleBoxFlat_ftxg7")
-ProgressBar/styles/fill = SubResource("StyleBoxFlat_4e6mi")
+Panel/styles/panel = SubResource("StyleBoxFlat_3f8jo")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_my6a4")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_dyxct")
 
 [sub_resource type="SystemFont" id="SystemFont_idoxl"]
 
@@ -96,10 +96,11 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="SystemFont" id="SystemFont_6epq6"]
+[sub_resource type="SystemFont" id="SystemFont_v378c"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_vfns5"]
-font = SubResource("SystemFont_6epq6")
+font = SubResource("SystemFont_v378c")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0.07058824, 0.08627451, 0.21176471, 1)

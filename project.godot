@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Through Your Eyes"
-run/main_scene="uid://jfotjweww5l7"
+run/main_scene="uid://de8spun77avf8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://betmugafyxri"
 
@@ -23,6 +23,9 @@ Global="*uid://caujc6di8j716"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/size/always_on_top=true
+window/size/window_width_override=360
+window/size/window_height_override=640
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 

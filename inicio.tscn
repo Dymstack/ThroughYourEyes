@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ea7kdmwar7u7"]
 
 [ext_resource type="Script" uid="uid://dgv7igf4qprv" path="res://inicio.gd" id="1_ylum6"]
-[ext_resource type="VideoStream" uid="uid://xjvwxiifueh4" path="res://historia.ogv" id="2_yogrx"]
-[ext_resource type="Texture2D" uid="uid://cjxs8r1unrhp7" path="res://inicio_bg.png" id="3_yogrx"]
-[ext_resource type="AudioStream" uid="uid://cvcfw3luqhpup" path="res://musica_fondo.mp3" id="4_htw3k"]
-[ext_resource type="Texture2D" uid="uid://s12bjplgbsol" path="res://omitir.png" id="5_7e6sy"]
+[ext_resource type="VideoStream" uid="uid://xjvwxiifueh4" path="res://addons/videos/historia.ogv" id="2_yogrx"]
+[ext_resource type="Texture2D" uid="uid://cjxs8r1unrhp7" path="res://addons/images/inicio_bg.png" id="3_yogrx"]
+[ext_resource type="AudioStream" uid="uid://cvcfw3luqhpup" path="res://addons/sounds/music.mp3" id="4_htw3k"]
+[ext_resource type="Texture2D" uid="uid://s12bjplgbsol" path="res://addons/images/omitir.png" id="5_7e6sy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_htw3k"]
 load_path = "res://.godot/imported/jugar.png-650fe0e9e578667f6ba5aee5bc6674c7.ctex"

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cig8i804y3881"]
+
+[ext_resource type="Script" uid="uid://o0mrdmpmgbnr" path="res://kai.gd" id="1_a4wox"]
+[ext_resource type="Texture2D" uid="uid://drg6mtdwk5myi" path="res://addons/images/kai_armed.png" id="1_mn8nd"]
+[ext_resource type="Texture2D" uid="uid://d0pe7tm21i5fw" path="res://addons/images/kai_default.png" id="2_iy2ka"]
+[ext_resource type="PackedScene" uid="uid://4vcckxqmj2jx" path="res://laser.tscn" id="2_tdgnr"]
+[ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="4_tdgnr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn8nd"]
+radius = 34.0
+height = 72.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfqim"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mn8nd")
+}],
+"loop": 1,
+"name": &"armed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iy2ka")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Kai" type="CharacterBody2D" unique_id=113328961]
+script = ExtResource("1_a4wox")
+laser_scene = ExtResource("2_tdgnr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=893450068]
+position = Vector2(0, 10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_mn8nd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2063081269]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_gfqim")
+animation = &"armed"
+frame_progress = 0.6772452
+
+[node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D" unique_id=659872821]
+position = Vector2(-1.5258789e-05, -627.50006)
+scale = Vector2(36.875004, 37.57812)
+texture = ExtResource("4_tdgnr")
+
+[node name="Marker2D" type="Marker2D" parent="AnimatedSprite2D" unique_id=54291826]
+position = Vector2(220, -430)

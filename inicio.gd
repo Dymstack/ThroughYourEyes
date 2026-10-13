@@ -41,4 +41,4 @@ func _on_video_terminado() -> void:
 		musica_fondo.play()
 
 func _on_boton_jugar_pressed() -> void:
-	get_tree().change_scene_to_file("res://nivel_1.tscn")
+	get_tree().change_scene_to_file("res://level1.tscn")

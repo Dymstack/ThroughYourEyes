@@ -104,12 +104,6 @@ func _on_boton_0_pressed(): ingresar_digito(0)
 func _on_boton_1_pressed(): ingresar_digito(1)
 func _on_boton_2_pressed(): ingresar_digito(2)
 func _on_boton_3_pressed(): ingresar_digito(3)
-func _on_boton_4_pressed(): ingresar_digito(4)
-func _on_boton_5_pressed(): ingresar_digito(5)
-func _on_boton_6_pressed(): ingresar_digito(6)
-func _on_boton_7_pressed(): ingresar_digito(7)
-func _on_boton_8_pressed(): ingresar_digito(8)
-func _on_boton_9_pressed(): ingresar_digito(9)
 
 func ingresar_digito(digito: int) -> void:
 	# Si el tutorial está activo o la pista está sonando, ignoramos el clic
