@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b056wlg07lrox" path="res://laser.gd" id="1_6vqwg"]
 [ext_resource type="Texture2D" uid="uid://bnde2n08xtgti" path="res://addons/images/bala.png" id="2_g6b45"]
+[ext_resource type="AudioStream" uid="uid://cxygncxduu24h" path="res://addons/sounds/laser.mp3" id="3_g6b45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bm4c"]
 radius = 7.0
@@ -16,5 +17,8 @@ texture = ExtResource("2_g6b45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=388176663]
 shape = SubResource("CircleShape2D_0bm4c")
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="." unique_id=839925516]
+stream = ExtResource("3_g6b45")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

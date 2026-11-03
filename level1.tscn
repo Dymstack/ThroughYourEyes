@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dhreq856uvvj8" path="res://level1.gd" id="1_i2041"]
 [ext_resource type="VideoStream" uid="uid://cst48gj4oqa75" path="res://addons/videos/nivel1.ogv" id="4_xy4tn"]
 [ext_resource type="PackedScene" uid="uid://cig8i804y3881" path="res://kai.tscn" id="5_mx85b"]
-[ext_resource type="PackedScene" uid="uid://dr6wt78msc13u" path="res://bala.tscn" id="6_hx44q"]
 [ext_resource type="PackedScene" uid="uid://csdy3bj7iomvj" path="res://hud.tscn" id="7_n8vhr"]
 [ext_resource type="Texture2D" uid="uid://iqeo2kfbnwvu" path="res://addons/images/flecha_salida.png" id="7_usj0q"]
 [ext_resource type="AudioStream" uid="uid://cvcfw3luqhpup" path="res://addons/sounds/music.mp3" id="8_usj0q"]
@@ -54,6 +53,9 @@ size = Vector2(102.125, 52.375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d1hv"]
 size = Vector2(74, 66)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xy4tn"]
+light_mode = 1
+
 [node name="Level 1" type="Node" unique_id=273296329]
 script = ExtResource("1_i2041")
 has_tutorial = true
@@ -65,7 +67,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("4_xy4tn")
-volume_db = -35.3
 autoplay = true
 expand = true
 loop = true
@@ -144,7 +145,6 @@ rotation = 3.1415927
 scale = Vector2(7855.2607, 214.19733)
 
 [node name="Kai" parent="." unique_id=113328961 instance=ExtResource("5_mx85b")]
-laser_scene = ExtResource("6_hx44q")
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=440583568]
 color = Color(0, 0, 0, 1)
@@ -153,13 +153,14 @@ color = Color(0, 0, 0, 1)
 
 [node name="Tutorial" parent="." unique_id=1185860797 instance=ExtResource("8_xy4tn")]
 
-[node name="FlechaMeta" type="Sprite2D" parent="." unique_id=1759029423]
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1923980367]
+stream = ExtResource("8_usj0q")
+
+[node name="GoalMarker" type="Sprite2D" parent="." unique_id=1759029423]
+material = SubResource("CanvasItemMaterial_xy4tn")
 position = Vector2(360, 127)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("7_usj0q")
-
-[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1923980367]
-stream = ExtResource("8_usj0q")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_hazard_body_entered"]
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

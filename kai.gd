@@ -3,24 +3,32 @@ extends CharacterBody2D
 @export var laser_scene: PackedScene
 @export var speed = 300
 var direccion_joystick = Vector2.ZERO
+var tocando_pared: bool = false
 
 @onready var sprite = $AnimatedSprite2D
 @onready var trigger = get_node_or_null("AnimatedSprite2D/Marker2D")
-@onready var light = get_node_or_null("AnimatedSprite2D/PointLight2D")
+@onready var light = get_node_or_null("PointLight2D")
 
 func _ready() -> void:
 	if light: light.energy = 0.0
 
-func _physics_process(delta) -> void:
+func _physics_process(delta: float) -> void:
+	# Buscamos el joystick en la escena actual
 	var joystick = get_tree().current_scene.get_node_or_null("HUD/Virtual Joystick")
 	
 	if joystick:
 		var direction = joystick.output
 		velocity = direction * speed
 		
+		# Si Kai se está moviendo, actualizamos su rotación
 		if velocity.length() > 0:
-			sprite.rotation = velocity.angle() + deg_to_rad(90)
-			
+			# Rotamos el sprite (+90 grados asumiendo que el dibujo original mira hacia arriba)
+			if sprite: sprite.rotation = velocity.angle() + deg_to_rad(90)
+						
+			# Rotamos la luz (asumiendo que el cono de luz fue dibujado mirando a la derecha)
+			if light: light.rotation = velocity.angle() + deg_to_rad(90)
+				
+		# Ejecutamos el movimiento y las colisiones
 		move_and_slide()
 		
 func shoot() -> void:

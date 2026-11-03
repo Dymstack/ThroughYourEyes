@@ -1,0 +1,283 @@
+[gd_scene format=3 uid="uid://b87gw86tjqer7"]
+
+[ext_resource type="Script" uid="uid://r0tmoyhbik7" path="res://enemy2.gd" id="1_jfe6r"]
+[ext_resource type="Texture2D" uid="uid://bnu56j82434we" path="res://addons/monster/Kraken_000.png" id="2_ccvjk"]
+[ext_resource type="Texture2D" uid="uid://bxd8lc1pi56xk" path="res://addons/monster/Kraken_001.png" id="3_0c181"]
+[ext_resource type="Texture2D" uid="uid://686ww7uf0jly" path="res://addons/monster/Kraken_002.png" id="4_wtaos"]
+[ext_resource type="Texture2D" uid="uid://chw5exh572xby" path="res://addons/monster/Kraken_003.png" id="5_0dj41"]
+[ext_resource type="Texture2D" uid="uid://ds6au45odwhnd" path="res://addons/monster/Kraken_004.png" id="6_52rh1"]
+[ext_resource type="Texture2D" uid="uid://dlypulnlqxcnw" path="res://addons/monster/Kraken_005.png" id="7_fxh7v"]
+[ext_resource type="Texture2D" uid="uid://cugeoduaw26jx" path="res://addons/monster/Kraken_006.png" id="8_konsq"]
+[ext_resource type="Texture2D" uid="uid://c06pqwta20cg8" path="res://addons/monster/Kraken_007.png" id="9_i4srm"]
+[ext_resource type="Texture2D" uid="uid://cpj5dsnggnmhy" path="res://addons/monster/Kraken_008.png" id="10_f0mbx"]
+[ext_resource type="Texture2D" uid="uid://mpbjiqtsxncr" path="res://addons/monster/Kraken_009.png" id="11_y5m6g"]
+[ext_resource type="Texture2D" uid="uid://b1si5sa5gf7uj" path="res://addons/monster/Kraken_010.png" id="12_eaewb"]
+[ext_resource type="Texture2D" uid="uid://bkuk8yunt8i53" path="res://addons/monster/Kraken_011.png" id="13_ax67j"]
+[ext_resource type="Texture2D" uid="uid://8gi866tuj332" path="res://addons/monster/Kraken_012.png" id="14_20tka"]
+[ext_resource type="Texture2D" uid="uid://brj444me7f841" path="res://addons/monster/Kraken_013.png" id="15_copf8"]
+[ext_resource type="Texture2D" uid="uid://b4fvq0md7jvw6" path="res://addons/monster/Kraken_014.png" id="16_atjal"]
+[ext_resource type="Texture2D" uid="uid://b1do44vhqbhwu" path="res://addons/monster/Kraken_015.png" id="17_qox3x"]
+[ext_resource type="Texture2D" uid="uid://nj0qs86rhpnp" path="res://addons/monster/Kraken_016.png" id="18_j37li"]
+[ext_resource type="Texture2D" uid="uid://crd15mi7v8xv2" path="res://addons/monster/Kraken_017.png" id="19_s37bt"]
+[ext_resource type="Texture2D" uid="uid://cmf3gueii3cm2" path="res://addons/monster/Kraken_018.png" id="20_dqix0"]
+[ext_resource type="Texture2D" uid="uid://ckisqvxlhxfx3" path="res://addons/monster/Kraken_019.png" id="21_kfc1x"]
+[ext_resource type="Texture2D" uid="uid://dqhlxvqios8vy" path="res://addons/monster/Kraken_020.png" id="22_taev1"]
+[ext_resource type="Texture2D" uid="uid://b8aicqleshffs" path="res://addons/monster/Kraken_021.png" id="23_2bx7u"]
+[ext_resource type="Texture2D" uid="uid://hljeryi1sdp4" path="res://addons/monster/Kraken_022.png" id="24_m7gng"]
+[ext_resource type="Texture2D" uid="uid://b41p8ki1dfukr" path="res://addons/monster/Kraken_023.png" id="25_lvgbo"]
+[ext_resource type="Texture2D" uid="uid://jordax21fwp6" path="res://addons/monster/Kraken_024.png" id="26_udsmf"]
+[ext_resource type="Texture2D" uid="uid://bfdl5ifby6it0" path="res://addons/monster/Kraken_025.png" id="27_al5ht"]
+[ext_resource type="Texture2D" uid="uid://cgpco153k3vid" path="res://addons/monster/Kraken_026.png" id="28_s8883"]
+[ext_resource type="Texture2D" uid="uid://b8pxqak2caoep" path="res://addons/monster/Kraken_027.png" id="29_tn5pk"]
+[ext_resource type="Texture2D" uid="uid://io4fqj0ikw2j" path="res://addons/monster/Kraken_028.png" id="30_lpln2"]
+[ext_resource type="Texture2D" uid="uid://barbqkd14d305" path="res://addons/monster/Kraken_029.png" id="31_wh5ni"]
+[ext_resource type="Texture2D" uid="uid://px7k6bwryhcv" path="res://addons/monster/Kraken_030.png" id="32_08asg"]
+[ext_resource type="Texture2D" uid="uid://c36fs4emhr8ch" path="res://addons/monster/Kraken_031.png" id="33_3c0bp"]
+[ext_resource type="Texture2D" uid="uid://c00ecjutsqhp" path="res://addons/monster/Kraken_032.png" id="34_k6bxg"]
+[ext_resource type="Texture2D" uid="uid://c6qxr58355q8k" path="res://addons/monster/Kraken_033.png" id="35_olmf5"]
+[ext_resource type="Texture2D" uid="uid://cc7gggwaitvu" path="res://addons/monster/Kraken_034.png" id="36_5bj72"]
+[ext_resource type="Texture2D" uid="uid://q8i8apa61q5y" path="res://addons/monster/Kraken_035.png" id="37_jc7nx"]
+[ext_resource type="Texture2D" uid="uid://c0qtmaitcyn01" path="res://addons/monster/Kraken_036.png" id="38_0fhfl"]
+[ext_resource type="Texture2D" uid="uid://btnthmq6uwnqr" path="res://addons/monster/Kraken_037.png" id="39_pcsgc"]
+[ext_resource type="Texture2D" uid="uid://cpxrbj32rveci" path="res://addons/monster/Kraken_038.png" id="40_n5jvq"]
+[ext_resource type="Texture2D" uid="uid://c1qil4niytyes" path="res://addons/monster/Kraken_039.png" id="41_isihg"]
+[ext_resource type="Texture2D" uid="uid://cn23exwym0lq6" path="res://addons/monster/Kraken_040.png" id="42_x1kl7"]
+[ext_resource type="Texture2D" uid="uid://caten84fcgbiq" path="res://addons/monster/Kraken_041.png" id="43_cadyr"]
+[ext_resource type="Texture2D" uid="uid://cyt0l8axi4iy4" path="res://addons/monster/Kraken_042.png" id="44_rqykq"]
+[ext_resource type="Texture2D" uid="uid://j2d2x6xgby1i" path="res://addons/monster/Kraken_043.png" id="45_so2cc"]
+[ext_resource type="Texture2D" uid="uid://dwk7tmg6jbo13" path="res://addons/monster/Kraken_044.png" id="46_qj7dj"]
+[ext_resource type="Texture2D" uid="uid://6relknpt8fl2" path="res://addons/monster/Kraken_045.png" id="47_cudjr"]
+[ext_resource type="Texture2D" uid="uid://cpvu6qyw1d2oo" path="res://addons/monster/Kraken_046.png" id="48_guwo6"]
+[ext_resource type="Texture2D" uid="uid://xi1cr6olh7ih" path="res://addons/monster/Kraken_047.png" id="49_i06n1"]
+[ext_resource type="Texture2D" uid="uid://bgywcm35fcos" path="res://addons/monster/Kraken_048.png" id="50_kejfj"]
+[ext_resource type="Texture2D" uid="uid://bi4nnpo00xcu4" path="res://addons/monster/Kraken_049.png" id="51_h6qeq"]
+[ext_resource type="Texture2D" uid="uid://tw3uwgi6u4ou" path="res://addons/monster/Kraken_050.png" id="52_bsbda"]
+[ext_resource type="Texture2D" uid="uid://gvyaov8fxfpd" path="res://addons/monster/Kraken_051.png" id="53_ekr1a"]
+[ext_resource type="Texture2D" uid="uid://ui5pdp86dvst" path="res://addons/monster/Kraken_052.png" id="54_p2gcf"]
+[ext_resource type="Texture2D" uid="uid://caao20bo0ay74" path="res://addons/monster/Kraken_053.png" id="55_mh8qb"]
+[ext_resource type="Texture2D" uid="uid://bxxekfa6hyi1g" path="res://addons/monster/Kraken_054.png" id="56_fkf31"]
+[ext_resource type="Texture2D" uid="uid://cwwnbhq6d6dwe" path="res://addons/monster/Kraken_055.png" id="57_mxqr8"]
+[ext_resource type="Texture2D" uid="uid://vgy5wrlks454" path="res://addons/monster/Kraken_056.png" id="58_bu2gg"]
+[ext_resource type="Texture2D" uid="uid://lehiexhmlj71" path="res://addons/monster/Kraken_057.png" id="59_t5sgx"]
+[ext_resource type="Texture2D" uid="uid://du45xxaacjq1b" path="res://addons/monster/Kraken_058.png" id="60_kooam"]
+[ext_resource type="Texture2D" uid="uid://dbe1hbm0tde5f" path="res://addons/monster/Kraken_059.png" id="61_hv32w"]
+[ext_resource type="AudioStream" uid="uid://dc0lurqkxiw4h" path="res://addons/sounds/snarl.mp3" id="62_wtaos"]
+[ext_resource type="AudioStream" uid="uid://tcgax4q11py" path="res://addons/sounds/monsterdeath.mp3" id="63_0dj41"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jugo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ccvjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0c181")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wtaos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0dj41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_52rh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fxh7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_konsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i4srm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f0mbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y5m6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eaewb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ax67j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_20tka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_copf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_atjal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qox3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_j37li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s37bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dqix0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kfc1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_taev1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2bx7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_m7gng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lvgbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_udsmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_al5ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_s8883")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tn5pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lpln2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wh5ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_08asg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_3c0bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_k6bxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_olmf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5bj72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_jc7nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_0fhfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_pcsgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_n5jvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_isihg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_x1kl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_cadyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_rqykq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_so2cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_qj7dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_cudjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_guwo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_i06n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_kejfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_h6qeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_bsbda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ekr1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_p2gcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_mh8qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_fkf31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_mxqr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_bu2gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_t5sgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_kooam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hv32w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gpiub"]
+radius = 59.0
+height = 150.0
+
+[node name="Enemy 2" type="CharacterBody2D" unique_id=862570604 groups=["enemigos"]]
+script = ExtResource("1_jfe6r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1406789121]
+modulate = Color(1, 1, 1, 0.60784316)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_jugo2")
+autoplay = "default"
+frame_progress = 0.5308699
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296964203]
+position = Vector2(0, -10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gpiub")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1981689307]
+
+[node name="GrowlSound" type="AudioStreamPlayer2D" parent="." unique_id=1977396029]
+stream = ExtResource("62_wtaos")
+autoplay = true
+max_distance = 600.0
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=167305043]
+stream = ExtResource("63_0dj41")
+volume_db = 10.0

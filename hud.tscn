@@ -68,6 +68,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="SystemFont" id="SystemFont_fnctx"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_615i1"]
 font = SubResource("SystemFont_fnctx")
@@ -108,6 +109,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="SystemFont" id="SystemFont_6epq6"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_5iihh"]
 font = SubResource("SystemFont_6epq6")

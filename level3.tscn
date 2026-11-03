@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://cv2xj6crulcsl"]
+
+[ext_resource type="Script" uid="uid://dhreq856uvvj8" path="res://level1.gd" id="1_rqrji"]
+[ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="2_bmsap"]
+[ext_resource type="Texture2D" uid="uid://dd34b4hpxakuj" path="res://addons/images/level3_bg.jpg" id="2_rqrji"]
+[ext_resource type="PackedScene" uid="uid://cig8i804y3881" path="res://kai.tscn" id="3_rqrji"]
+[ext_resource type="PackedScene" uid="uid://csdy3bj7iomvj" path="res://hud.tscn" id="5_ci4mn"]
+[ext_resource type="Texture2D" uid="uid://iqeo2kfbnwvu" path="res://addons/images/flecha_salida.png" id="6_sotx7"]
+[ext_resource type="Script" uid="uid://dma0agddhy1hw" path="res://level3.gd" id="7_8x87a"]
+[ext_resource type="PackedScene" uid="uid://b87gw86tjqer7" path="res://enemy2.tscn" id="7_rqrji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqrji"]
+size = Vector2(717, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x87a"]
+size = Vector2(15, 1295)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci4mn"]
+size = Vector2(718, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sotx7"]
+size = Vector2(10, 1288)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfqim"]
+radius = 214.00934
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gaofk"]
+size = Vector2(384, 408.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_itrrf"]
+light_mode = 1
+
+[sub_resource type="Curve2D" id="Curve2D_rqrji"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -103, 950, -295.04547, -1.2884082, 295.04547, 1.2884082, 352, 1031, 270.5657, -122.29811, -270.5657, 122.29811, 812, 964, 0, 0, 0, 0, -103, 950)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_8x87a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -95, 854, -150.74376, 11.595674, 150.74376, -11.595674, 181, 964, -128.84082, 32.210205, 128.84082, -32.210205, 477, 896, 0, 0, 0, 0, 829, 902, 231.91345, -91.476974, -231.91345, 91.476974, 342, 935, 0, 0, 0, 0, -95, 854)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_ci4mn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 860, 867, 101.156006, -5.3240004, -101.156006, 5.3240004, 624, 953, 122.452, -1.0648, -122.452, 1.0648, 400, 892, 102.2208, 1.0648, -102.2208, -1.0648, 240, 983, 81.9896, 23.4256, -81.9896, -23.4256, 70, 908, 0, 0, 0, 0, -111, 917, 0, 0, 0, 0, 860, 867)
+}
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_sotx7"]
+_data = {
+"points": PackedVector2Array(76.53144, -17.006987, -76.53144, 17.006987, 468, 590, -9.920742, -58.107204, 9.920742, 58.107204, 144, 705, -55.272705, 26.927729, 55.272705, -26.927729, 470, 752, 0, 0, 0, 0, 468, 590)
+}
+point_count = 4
+
+[node name="Level 3" type="Node" unique_id=1070311699]
+script = ExtResource("1_rqrji")
+enable_shoot = true
+msg_victory = "¡La cápsula de escape!
+Ahora puedes volver a la Tierra."
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1687988888]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rqrji")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1628385739]
+collision_layer = 2
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1969177783]
+position = Vector2(359.5, 4.5)
+shape = SubResource("RectangleShape2D_rqrji")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1499668931]
+position = Vector2(0, 645)
+shape = SubResource("RectangleShape2D_8x87a")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=476913337]
+position = Vector2(360, 1275)
+shape = SubResource("RectangleShape2D_ci4mn")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=66351001]
+position = Vector2(721, 645)
+shape = SubResource("RectangleShape2D_sotx7")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=321759865]
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D2" unique_id=206503308]
+position = Vector2(374, 167)
+shape = SubResource("CircleShape2D_gfqim")
+
+[node name="CapLight" type="PointLight2D" parent="." unique_id=435459856]
+position = Vector2(370, 177)
+scale = Vector2(5.78125, 5.375)
+energy = 1.2
+texture = ExtResource("2_bmsap")
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=248205456]
+position = Vector2(350, 1156)
+rotation = -3.1415925
+scale = Vector2(7855.2607, 214.19733)
+
+[node name="Kai" parent="." unique_id=113328961 instance=ExtResource("3_rqrji")]
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1317460256]
+color = Color(0, 0, 0, 1)
+
+[node name="Goal" type="Area2D" parent="." unique_id=1773826278]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Goal" unique_id=1094360149]
+position = Vector2(374, 201.75)
+shape = SubResource("RectangleShape2D_gaofk")
+
+[node name="HUD" parent="." unique_id=640789018 instance=ExtResource("5_ci4mn")]
+
+[node name="GoalMarker" type="Sprite2D" parent="." unique_id=1108354688]
+material = SubResource("CanvasItemMaterial_itrrf")
+position = Vector2(374, 343)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_sotx7")
+
+[node name="Node" type="Node" parent="." unique_id=1270977527]
+script = ExtResource("7_8x87a")
+
+[node name="Path2D" type="Path2D" parent="Node" unique_id=1881601481]
+position = Vector2(0, 240.38261)
+scale = Vector2(1, 0.79012346)
+curve = SubResource("Curve2D_rqrji")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node/Path2D" unique_id=2014381475]
+position = Vector2(-103, 950)
+rotation = 0.46231776
+
+[node name="Enemy 2" parent="Node/Path2D/PathFollow2D" unique_id=862570604 instance=ExtResource("7_rqrji")]
+position = Vector2(-11.304709, 4.219618)
+rotation = -1.6755161
+scale = Vector2(0.99999994, 0.9999999)
+
+[node name="Path2D2" type="Path2D" parent="Node" unique_id=1510239702]
+position = Vector2(677, 1403)
+rotation = -3.1415927
+curve = SubResource("Curve2D_8x87a")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node/Path2D2" unique_id=1005682940]
+position = Vector2(-95, 854)
+rotation = 0.77057034
+
+[node name="Enemy 2" parent="Node/Path2D2/PathFollow2D" unique_id=1953020205 instance=ExtResource("7_rqrji")]
+position = Vector2(-117.20567, 0.5847149)
+rotation = 4.7211156
+
+[node name="Path2D3" type="Path2D" parent="Node" unique_id=587845528]
+curve = SubResource("Curve2D_ci4mn")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node/Path2D3" unique_id=1663509673]
+position = Vector2(860, 867)
+rotation = 2.6024303
+
+[node name="Enemy 2" parent="Node/Path2D3/PathFollow2D" unique_id=247032763 instance=ExtResource("7_rqrji")]
+rotation = -1.4556046
+
+[node name="Path2D4" type="Path2D" parent="Node" unique_id=481126126]
+position = Vector2(0, 124.44504)
+scale = Vector2(1, 0.7975508)
+curve = SubResource("Curve2D_sotx7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node/Path2D4" unique_id=1893920133]
+position = Vector2(468, 590)
+rotation = 2.922924
+
+[node name="Enemy 2" parent="Node/Path2D4/PathFollow2D" unique_id=650807918 instance=ExtResource("7_rqrji")]
+rotation = -1.3840461
+
+[connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

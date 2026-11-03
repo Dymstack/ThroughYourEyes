@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bhjt4q05i4mg3"]
+
+[ext_resource type="Script" uid="uid://b7x41trn17cv" path="res://enemy.gd" id="1_iifgy"]
+[ext_resource type="Texture2D" uid="uid://c7yab3y8jllok" path="res://addons/images/enemigo1.png" id="2_iifgy"]
+[ext_resource type="AudioStream" uid="uid://dc0lurqkxiw4h" path="res://addons/sounds/snarl.mp3" id="3_iifgy"]
+[ext_resource type="AudioStream" uid="uid://tcgax4q11py" path="res://addons/sounds/monsterdeath.mp3" id="4_epg4t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5tj2"]
+radius = 40.0
+height = 82.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=760359585 groups=["enemigos"]]
+script = ExtResource("1_iifgy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2045289058]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_iifgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849408220]
+shape = SubResource("CapsuleShape2D_a5tj2")
+
+[node name="GrowlSound" type="AudioStreamPlayer2D" parent="." unique_id=1746058528]
+stream = ExtResource("3_iifgy")
+autoplay = true
+max_distance = 600.0
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=1686707521]
+stream = ExtResource("4_epg4t")
+volume_db = 10.0

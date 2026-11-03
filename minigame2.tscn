@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://ep4l4t6uhsgw"]
+
+[ext_resource type="Script" uid="uid://dhreq856uvvj8" path="res://level1.gd" id="1_vyhyy"]
+[ext_resource type="Script" uid="uid://cq4xc4handxp6" path="res://minigame2.gd" id="1_wxcrj"]
+[ext_resource type="PackedScene" uid="uid://csdy3bj7iomvj" path="res://hud.tscn" id="4_wxcrj"]
+[ext_resource type="AudioStream" uid="uid://bv4unc4nvxyk4" path="res://addons/sounds/dial1.mp3" id="6_u80kx"]
+[ext_resource type="AudioStream" uid="uid://cabwhn0gr0qkg" path="res://addons/sounds/dial2.mp3" id="7_2fs34"]
+[ext_resource type="AudioStream" uid="uid://byayd2mw0h1sv" path="res://addons/sounds/dial3.mp3" id="8_3hmma"]
+[ext_resource type="AudioStream" uid="uid://dlnksjnsi6orh" path="res://addons/sounds/dial4.mp3" id="9_s6qj7"]
+[ext_resource type="AudioStream" uid="uid://s8o2uithd1wb" path="res://addons/sounds/error.mp3" id="12_2fs34"]
+[ext_resource type="Texture2D" uid="uid://bhv2otmrb6hj2" path="res://addons/images/nivel2_mg_bg.png" id="12_h6lei"]
+[ext_resource type="Texture2D" uid="uid://6kw8m0i10y8a" path="res://luz.tres" id="13_t2ovr"]
+[ext_resource type="Texture2D" uid="uid://o5t7ologj0g" path="res://addons/images/boton_escuchar.png" id="14_au8pp"]
+[ext_resource type="AudioStream" uid="uid://db37qykluj3xh" path="res://addons/sounds/victory.mp3" id="18_wytu7"]
+[ext_resource type="AudioStream" uid="uid://dk11h8arkp448" path="res://addons/sounds/door-unlock.mp3" id="20_dsmkj"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wxcrj"]
+light_mode = 1
+
+[node name="Minigame 2" type="Node" unique_id=411190242]
+script = ExtResource("1_vyhyy")
+is_minigame = true
+enable_joystick = false
+enable_light = false
+msg_victory = "¡Salvaste a Cap!
+Encuentra la cápsula de escape rápidamente.
+"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1858393172]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_h6lei")
+expand_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=961756163]
+position = Vector2(360.49997, 728.99994)
+scale = Vector2(11.234375, 17.21875)
+texture = ExtResource("13_t2ovr")
+
+[node name="Oscuridad" type="CanvasModulate" parent="." unique_id=440583568]
+color = Color(0, 0, 0, 1)
+
+[node name="HUD" parent="." unique_id=640789018 instance=ExtResource("4_wxcrj")]
+
+[node name="Node" type="Node" parent="." unique_id=110936860]
+script = ExtResource("1_wxcrj")
+key_sounds = Array[AudioStream]([ExtResource("6_u80kx"), ExtResource("7_2fs34"), ExtResource("8_3hmma"), ExtResource("9_s6qj7")])
+
+[node name="ButtonHear" type="Button" parent="Node" unique_id=1810748651]
+material = SubResource("CanvasItemMaterial_wxcrj")
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 522.0
+offset_top = -199.0
+offset_right = 1554.0
+offset_bottom = 833.0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("14_au8pp")
+flat = true
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="Node" unique_id=1094132816]
+
+[node name="Button0" type="Button" parent="Node" unique_id=2130551666]
+offset_left = 149.0
+offset_top = 888.99994
+offset_right = 160.17795
+offset_bottom = 901.54944
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Button1" type="Button" parent="Node" unique_id=704930915]
+offset_left = 243.99998
+offset_top = 888.99994
+offset_right = 256.43546
+offset_bottom = 901.41565
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Button2" type="Button" parent="Node" unique_id=1992365388]
+offset_left = 344.99997
+offset_top = 888.99994
+offset_right = 356.87653
+offset_bottom = 901.4157
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="Button3" type="Button" parent="Node" unique_id=1611029781]
+offset_left = 443.0
+offset_top = 888.99994
+offset_right = 455.85464
+offset_bottom = 901.57794
+scale = Vector2(7.1569533, 7.4733686)
+flat = true
+
+[node name="SonidoGanador" type="AudioStreamPlayer2D" parent="Node" unique_id=164449939]
+position = Vector2(363.00003, 714.99994)
+rotation = -3.1415925
+scale = Vector2(9.706739, -16.213196)
+stream = ExtResource("18_wytu7")
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="Node" unique_id=993211823]
+stream = ExtResource("12_2fs34")
+volume_db = 24.0
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="Node" unique_id=784363024]
+stream = ExtResource("20_dsmkj")
+
+[connection signal="pressed" from="Node/Button0" to="Node" method="_on_button_0_pressed"]
+[connection signal="pressed" from="Node/Button1" to="Node" method="_on_button_1_pressed"]
+[connection signal="pressed" from="Node/Button2" to="Node" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node/Button3" to="Node" method="_on_button_3_pressed"]

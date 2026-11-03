@@ -28,7 +28,7 @@ func _ready() -> void:
 		
 	if button_restart: button_restart.pressed.connect(_on_restart_pressed)
 	if button_home: button_home.pressed.connect(_on_home_pressed)
-	if button_home2: button_home2.pressed.connect(_on_home_pressed2)
+	if button_home2: button_home2.pressed.connect(_on_home_pressed)
 	if button_next_level: button_next_level.pressed.connect(_on_next_level_pressed)
 
 func start_oxygen(amount: int) -> void:
@@ -82,31 +82,33 @@ func show_victory(victory_text: String) -> void:
 # --- FUNCIONES DE NAVEGACIÓN ---
 
 func _on_restart_pressed() -> void:
+	if not is_inside_tree(): return
 	# 1. Quitamos la pausa del árbol antes de recargar
 	get_tree().paused = false 
 	# 2. Recargamos la escena en la que estamos actualmente (sirve para Nivel 1, 2 o 3)
 	get_tree().call_deferred("reload_current_scene")
 
 func _on_home_pressed() -> void:
-	get_tree().paused = false
-	# PON LA RUTA EXACTA DE TU MENÚ DE INICIO AQUÍ:
-	get_tree().change_scene_to_file("res://main.tscn")
-	
-func _on_home_pressed2() -> void:
+	if not is_inside_tree(): return
 	get_tree().paused = false
 	# PON LA RUTA EXACTA DE TU MENÚ DE INICIO AQUÍ:
 	get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_next_level_pressed() -> void:
+	if not is_inside_tree(): return
 	get_tree().paused = false
 	
 	# Para saber a qué nivel ir, podemos revisar el nombre de la escena actual
 	var current_scene_name = get_tree().current_scene.name
 	
-	if current_scene_name == "Level1":
-		get_tree().call_deferred("change_scene_to_file", "res://level_2.tscn")
-	elif current_scene_name == "Level2":
-		get_tree().call_deferred("change_scene_to_file", "res://level_3.tscn")
+	if current_scene_name == "Level 1":
+		get_tree().call_deferred("change_scene_to_file", "res://minigame1.tscn")
+	elif current_scene_name == "Minigame 1":
+		get_tree().call_deferred("change_scene_to_file", "res://level2.tscn")
+	elif current_scene_name == "Level 2":
+		get_tree().call_deferred("change_scene_to_file", "res://minigame2.tscn")
+	elif current_scene_name == "Minigame 2":
+		get_tree().call_deferred("change_scene_to_file", "res://level3.tscn")
 	else:
 		# Si ya estamos en el Nivel 3, volver al inicio o pantalla final
 		get_tree().change_scene_to_file("res://main.tscn")
